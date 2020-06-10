@@ -6,4 +6,5 @@
     <string name="hello_world" translatable="false">Hello World</string>
     <string name="welcome" translatable="false">Welcome</string>
     <string name="simple_save_state" translatable="false">Simple Save State</string>
+    <string name="plus1" translatable="false">+1</string>
 </resources>
