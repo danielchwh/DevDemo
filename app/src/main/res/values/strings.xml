@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DevDemo</string>
+    <string name="app_title">The is a demo of Android app development</string>
+    <string name="save_state_with_view_model" translatable="false">Save State With View Model</string>
+    <string name="demo" translatable="false">Demo</string>
+    <string name="hello_world" translatable="false">Hello World</string>
+    <string name="welcome" translatable="false">Welcome</string>
+    <string name="simple_save_state" translatable="false">Simple Save State</string>
+</resources>
