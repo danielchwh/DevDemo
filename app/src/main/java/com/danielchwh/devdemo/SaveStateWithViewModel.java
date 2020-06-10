@@ -18,7 +18,7 @@ public class SaveStateWithViewModel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // set action bar
-        getSupportActionBar().setTitle(R.string.simple_save_state);
+        getSupportActionBar().setTitle(R.string.save_state_with_view_model);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -33,7 +33,6 @@ public class SaveStateWithViewModel extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             finish();
-            overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
         }
         return super.onOptionsItemSelected(item);
     }

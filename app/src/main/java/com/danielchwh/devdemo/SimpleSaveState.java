@@ -59,7 +59,6 @@ public class SimpleSaveState extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             finish();
-            overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
         }
         return super.onOptionsItemSelected(item);
     }
