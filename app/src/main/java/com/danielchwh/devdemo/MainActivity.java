@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Create contents and insert item
         allItems = new ArrayList<ContentsItem>();
-        allItems.add(new ContentsItem(getString(R.string.landscape_layout), "..."));
-        allItems.add(new ContentsItem(getString(R.string.save_state), "..."));
-        allItems.add(new ContentsItem(getString(R.string.save_state_with_mvvm), "..."));
-        allItems.add(new ContentsItem(getString(R.string.save_preferences), "..."));
-        allItems.add(new ContentsItem(getString(R.string.timer), "..."));
+        allItems.add(new ContentsItem(getString(R.string.landscape_layout), getString(R.string.landscape_layout_description)));
+        allItems.add(new ContentsItem(getString(R.string.save_state), getString(R.string.save_state_description)));
+        allItems.add(new ContentsItem(getString(R.string.save_state_with_mvvm), getString(R.string.save_state_with_mvvm_description)));
+        allItems.add(new ContentsItem(getString(R.string.save_preferences), getString(R.string.save_preferences_description)));
+        allItems.add(new ContentsItem(getString(R.string.timer), getString(R.string.timer_description)));
         allItems.add(new ContentsItem("To be continuous", "..."));
         allItems.add(new ContentsItem("To be continuous", "..."));
         allItems.add(new ContentsItem("To be continuous", "..."));
