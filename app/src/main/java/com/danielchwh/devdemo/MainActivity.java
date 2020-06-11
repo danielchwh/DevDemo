@@ -1,59 +1,32 @@
 package com.danielchwh.devdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
-    private Button button1, button2, button3, button4, button5;
+    private RecyclerView recyclerView;
+    private ContentsAdapter contentsAdapter;
+    private List<ContentsItem> allItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button1 = findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, LandscapeLayout.class);
-                startActivity(intent);
-            }
-        });
-        button2 = findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SaveState.class);
-                startActivity(intent);
-            }
-        });
-        button3 = findViewById(R.id.button3);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SaveStateWithMVVM.class);
-                startActivity(intent);
-            }
-        });
-        button4 = findViewById(R.id.button4);
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SavePreferences.class);
-                startActivity(intent);
-            }
-        });
-        button5 = findViewById(R.id.button5);
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Timer.class);
-                startActivity(intent);
-            }
-        });
+        recyclerView = findViewById(R.id.recyclerView);
+        allItems = ContentsItem.initialize();
+        contentsAdapter = new ContentsAdapter(this, allItems);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(contentsAdapter);
     }
 }
