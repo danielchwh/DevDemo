@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         allItems.add(new ContentsItem(getString(R.string.save_preferences), "..."));
         allItems.add(new ContentsItem(getString(R.string.timer), "..."));
         allItems.add(new ContentsItem("To be continuous", "..."));
+        allItems.add(new ContentsItem("To be continuous", "..."));
+        allItems.add(new ContentsItem("To be continuous", "..."));
+        allItems.add(new ContentsItem("To be continuous", "..."));
 
         // Create adpater and link to recyclerView
         contentsAdapter = new ContentsAdapter(allItems);

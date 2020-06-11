@@ -1,7 +1,5 @@
 package com.danielchwh.devdemo;
 
-import java.util.ArrayList;
-
 public class ContentsItem {
     private String itemName;
     private String itemDescription;

@@ -47,8 +47,8 @@ public class ContentsAdapter extends RecyclerView.Adapter<ContentsAdapter.Conten
                     intent = new Intent(holder.itemView.getContext(), SavePreferences.class);
                 } else if (position == 4) {
                     intent = new Intent(holder.itemView.getContext(), Timer.class);
-                } else if (position == 5) {
-                    intent = new Intent(holder.itemView.getContext(), MainActivity.class);
+                } else {
+                    return;
                 }
                 holder.itemView.getContext().startActivity(intent);
             }
