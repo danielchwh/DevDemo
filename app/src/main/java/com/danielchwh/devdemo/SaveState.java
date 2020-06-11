@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class SimpleSaveState extends AppCompatActivity {
+public class SaveState extends AppCompatActivity {
     TextView textView;
     Button button1;
     Button button2;
@@ -17,14 +17,14 @@ public class SimpleSaveState extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_simple_save_state);
+        setContentView(R.layout.activity_save_state);
 
         textView = findViewById(R.id.textView);
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
 
         // set action bar
-        getSupportActionBar().setTitle(R.string.simple_save_state);
+        getSupportActionBar().setTitle(R.string.save_state);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

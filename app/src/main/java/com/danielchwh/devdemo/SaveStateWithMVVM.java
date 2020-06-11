@@ -7,10 +7,10 @@ import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.danielchwh.devdemo.databinding.ActivitySaveStateWithViewModelBinding;
+import com.danielchwh.devdemo.databinding.ActivitySaveStateWithMvvmBinding;
 
-public class SaveStateWithViewModel extends AppCompatActivity {
-    ActivitySaveStateWithViewModelBinding binding;
+public class SaveStateWithMVVM extends AppCompatActivity {
+    ActivitySaveStateWithMvvmBinding binding;
     NumberCounter counter;
 
     @Override
@@ -18,12 +18,12 @@ public class SaveStateWithViewModel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // set action bar
-        getSupportActionBar().setTitle(R.string.save_state_with_view_model);
+        getSupportActionBar().setTitle(R.string.save_state_with_mvvm);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         // restore from saved state
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_save_state_with_view_model);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_save_state_with_mvvm);
         counter = new ViewModelProvider(this).get(NumberCounter.class);
         binding.setData(counter);
         binding.setLifecycleOwner(this);
