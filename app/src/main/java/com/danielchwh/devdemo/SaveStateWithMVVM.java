@@ -29,6 +29,7 @@ public class SaveStateWithMVVM extends AppCompatActivity {
         binding.setLifecycleOwner(this);
     }
 
+    // action bar back button
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

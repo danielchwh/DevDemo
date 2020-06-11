@@ -55,6 +55,7 @@ public class SaveState extends AppCompatActivity {
         outState.putString("text", textView.getText().toString());
     }
 
+    // action bar back button
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
