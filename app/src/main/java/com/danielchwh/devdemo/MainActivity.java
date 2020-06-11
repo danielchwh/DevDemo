@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
+		// Create contents and insert item
         allItems = new ArrayList<ContentsItem>();
         allItems.add(new ContentsItem(getString(R.string.landscape_layout), "..."));
         allItems.add(new ContentsItem(getString(R.string.save_state), "..."));
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         allItems.add(new ContentsItem(getString(R.string.timer), "..."));
         allItems.add(new ContentsItem("To be continuous", "..."));
 
+		// Create adpater and link to recyclerView
         contentsAdapter = new ContentsAdapter(this, allItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(contentsAdapter);

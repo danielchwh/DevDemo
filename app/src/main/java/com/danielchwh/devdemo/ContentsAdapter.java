@@ -34,7 +34,8 @@ public class ContentsAdapter extends RecyclerView.Adapter<ContentsAdapter.Conten
 
     @Override
     public void onBindViewHolder(@NonNull ContentsViewHolder holder, int position) {
-        ContentsItem item = allItems.get(position);
+        // Get item from list and diaplay its content in textView
+		ContentsItem item = allItems.get(position);
         holder.itemName.setText(item.getItemName());
         holder.itemDescription.setText(item.getItemDescription());
     }
@@ -49,6 +50,7 @@ public class ContentsAdapter extends RecyclerView.Adapter<ContentsAdapter.Conten
         private Context context;
         public ContentsViewHolder(@NonNull View itemView) {
             super(itemView);
+			// Get view and context
             itemName = itemView.findViewById(R.id.itemName);
             itemDescription = itemView.findViewById(R.id.itemDescription);
             this.context = itemView.getContext();
@@ -57,6 +59,7 @@ public class ContentsAdapter extends RecyclerView.Adapter<ContentsAdapter.Conten
 
         @Override
         public void onClick(View view) {
+			// Set up button click event
             int position = getAdapterPosition();
             Intent intent = null;
             if (position == 0) {
