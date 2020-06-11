@@ -12,8 +12,8 @@
     <string name="landscape_layout" translatable="false">Landscape Layout</string>
     <string name="timer" translatable="false">Timer</string>
     <string name="landscape_layout_description" translatable="false">Provide layout for landscape</string>
-    <string name="save_state_description" translatable="false">Keep data loss when activity restart</string>
-    <string name="save_state_with_mvvm_description" translatable="false">Keep data loss when activity restart (for MVVM)</string>
-    <string name="save_preferences_description" translatable="false">Keep data when app restart</string>
+    <string name="save_state_description" translatable="false">Save data before activity is destroyed</string>
+    <string name="save_state_with_mvvm_description" translatable="false">Save data before activity is destroyed (for MVVM)</string>
+    <string name="save_preferences_description" translatable="false">Save data before app is closed</string>
     <string name="timer_description" translatable="false">Count running time</string>
 </resources>
