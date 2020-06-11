@@ -18,15 +18,4 @@ public class ContentsItem {
     public String getItemDescription() {
         return itemDescription;
     }
-
-    public static ArrayList<ContentsItem> initialize() {
-        ArrayList<ContentsItem> allItems = new ArrayList<ContentsItem>();
-        allItems.add(new ContentsItem("LandscapeLayout", "..."));
-        allItems.add(new ContentsItem("SaveState", "..."));
-        allItems.add(new ContentsItem("SaveStateWithMVVM", "..."));
-        allItems.add(new ContentsItem("SavePreferences", "..."));
-        allItems.add(new ContentsItem("Timer", "..."));
-        allItems.add(new ContentsItem("", "..."));
-        return allItems;
-    }
 }
