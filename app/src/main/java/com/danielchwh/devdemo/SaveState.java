@@ -10,9 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class SaveState extends AppCompatActivity {
-    TextView textView;
-    Button button1;
-    Button button2;
+    private TextView textView;
+    private Button button1;
+    private Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

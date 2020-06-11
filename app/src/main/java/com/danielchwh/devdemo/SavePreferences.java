@@ -58,9 +58,9 @@ public class SavePreferences extends AppCompatActivity {
 
     @Override
     protected void onPause() {
+        super.onPause();
         // save number to saved preferences
         editor.putInt("num", num);
         editor.apply();
-        super.onPause();
     }
 }

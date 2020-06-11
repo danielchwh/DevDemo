@@ -10,8 +10,8 @@ import android.view.MenuItem;
 import com.danielchwh.devdemo.databinding.ActivitySaveStateWithMvvmBinding;
 
 public class SaveStateWithMVVM extends AppCompatActivity {
-    ActivitySaveStateWithMvvmBinding binding;
-    NumberCounter counter;
+    private ActivitySaveStateWithMvvmBinding binding;
+    private NumberCounter counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
