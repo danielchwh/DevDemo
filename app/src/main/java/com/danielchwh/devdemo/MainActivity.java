@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         allItems.add(new MainActivity_Item(getString(R.string.save_preferences), getString(R.string.save_preferences_description)));
         allItems.add(new MainActivity_Item(getString(R.string.timer), getString(R.string.timer_description)));
         allItems.add(new MainActivity_Item(getString(R.string.room_database), getString(R.string.room_database_description)));
-        allItems.add(new MainActivity_Item("", ""));
+        allItems.add(new MainActivity_Item(getString(R.string.navigation), getString(R.string.navigation_description)));
         allItems.add(new MainActivity_Item("", ""));
         allItems.add(new MainActivity_Item("", ""));
 

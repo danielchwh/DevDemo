@@ -20,4 +20,6 @@
     <string name="room_database_description">Easier to work with SQLiteDatabase</string>
     <string name="insert_random_number">Insert random number</string>
     <string name="delete_the_first_number">Delete the first number</string>
+    <string name="navigation">Navigation</string>
+    <string name="navigation_description">A demo of navigation, fragment, and action bar</string>
 </resources>

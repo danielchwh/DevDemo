@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RoomDatabase"></activity>
+        <activity android:name=".NavigationDemo"></activity>
+        <activity android:name=".RoomDatabase" />
         <activity android:name=".Timer" />
         <activity android:name=".LandscapeLayout" />
         <activity android:name=".SavePreferences" />

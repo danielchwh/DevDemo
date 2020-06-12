@@ -49,6 +49,8 @@ public class MainActivity_Adapter extends RecyclerView.Adapter<MainActivity_Adap
                     intent = new Intent(holder.itemView.getContext(), Timer.class);
                 } else if (position == 5) {
                     intent = new Intent(holder.itemView.getContext(), RoomDatabase.class);
+                } else if (position == 6) {
+                    intent = new Intent(holder.itemView.getContext(), NavigationDemo.class);
                 } else {
                     return;
                 }
