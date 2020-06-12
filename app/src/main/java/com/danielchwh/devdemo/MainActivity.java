@@ -11,8 +11,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private ContentsAdapter contentsAdapter;
-    private List<ContentsItem> allItems;
+    private MainActivity_Adapter adapter;
+    private List<MainActivity_Item> allItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,20 +22,20 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
 
         // Create contents and insert item
-        allItems = new ArrayList<ContentsItem>();
-        allItems.add(new ContentsItem(getString(R.string.landscape_layout), getString(R.string.landscape_layout_description)));
-        allItems.add(new ContentsItem(getString(R.string.save_state), getString(R.string.save_state_description)));
-        allItems.add(new ContentsItem(getString(R.string.save_state_with_mvvm), getString(R.string.save_state_with_mvvm_description)));
-        allItems.add(new ContentsItem(getString(R.string.save_preferences), getString(R.string.save_preferences_description)));
-        allItems.add(new ContentsItem(getString(R.string.timer), getString(R.string.timer_description)));
-        allItems.add(new ContentsItem("To be continuous", "..."));
-        allItems.add(new ContentsItem("To be continuous", "..."));
-        allItems.add(new ContentsItem("To be continuous", "..."));
-        allItems.add(new ContentsItem("To be continuous", "..."));
+        allItems = new ArrayList<MainActivity_Item>();
+        allItems.add(new MainActivity_Item(getString(R.string.landscape_layout), getString(R.string.landscape_layout_description)));
+        allItems.add(new MainActivity_Item(getString(R.string.save_state), getString(R.string.save_state_description)));
+        allItems.add(new MainActivity_Item(getString(R.string.save_state_with_mvvm), getString(R.string.save_state_with_mvvm_description)));
+        allItems.add(new MainActivity_Item(getString(R.string.save_preferences), getString(R.string.save_preferences_description)));
+        allItems.add(new MainActivity_Item(getString(R.string.timer), getString(R.string.timer_description)));
+        allItems.add(new MainActivity_Item(getString(R.string.room_database), getString(R.string.room_database_description)));
+        allItems.add(new MainActivity_Item("", ""));
+        allItems.add(new MainActivity_Item("", ""));
+        allItems.add(new MainActivity_Item("", ""));
 
         // Create adpater and link to recyclerView
-        contentsAdapter = new ContentsAdapter(allItems);
+        adapter = new MainActivity_Adapter(allItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(contentsAdapter);
+        recyclerView.setAdapter(adapter);
     }
 }

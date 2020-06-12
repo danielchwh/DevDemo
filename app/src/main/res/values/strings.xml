@@ -1,19 +1,23 @@
 <resources>
     <string name="app_name">DevDemo</string>
     <string name="app_title">The is a demo of Android app development</string>
-    <string name="save_state_with_mvvm" translatable="false">Save State With MVVM</string>
-    <string name="demo" translatable="false">Demo</string>
-    <string name="hello_world" translatable="false">Hello World</string>
-    <string name="welcome" translatable="false">Welcome</string>
-    <string name="save_state" translatable="false">Save State</string>
-    <string name="plus1" translatable="false">+1</string>
-    <string name="minus1" translatable="false">-1</string>
-    <string name="save_preferences" translatable="false">Save Preferences</string>
-    <string name="landscape_layout" translatable="false">Landscape Layout</string>
-    <string name="timer" translatable="false">Timer</string>
-    <string name="landscape_layout_description" translatable="false">Provide layout for landscape</string>
-    <string name="save_state_description" translatable="false">Save data temporarily</string>
-    <string name="save_state_with_mvvm_description" translatable="false">Save data temporarily (for MVVM)</string>
-    <string name="save_preferences_description" translatable="false">Save data permanently</string>
-    <string name="timer_description" translatable="false">Count running time</string>
+    <string name="save_state_with_mvvm">Save State With MVVM</string>
+    <string name="demo">Demo</string>
+    <string name="hello_world">Hello World</string>
+    <string name="welcome">Welcome</string>
+    <string name="save_state">Save State</string>
+    <string name="plus1">+1</string>
+    <string name="minus1">-1</string>
+    <string name="save_preferences">Save Preferences</string>
+    <string name="landscape_layout">Landscape Layout</string>
+    <string name="timer">Timer</string>
+    <string name="landscape_layout_description">Provide layout for landscape</string>
+    <string name="save_state_description">Save data temporarily</string>
+    <string name="save_state_with_mvvm_description">Save data temporarily (for MVVM)</string>
+    <string name="save_preferences_description">Save data permanently</string>
+    <string name="timer_description">Count running time</string>
+    <string name="room_database">Room Database</string>
+    <string name="room_database_description">Easier to work with SQLiteDatabase</string>
+    <string name="insert_random_number">Insert random number</string>
+    <string name="delete_the_first_number">Delete the first number</string>
 </resources>

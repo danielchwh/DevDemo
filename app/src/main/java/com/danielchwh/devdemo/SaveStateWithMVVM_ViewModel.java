@@ -10,11 +10,11 @@ import androidx.lifecycle.ViewModel;
 * implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-alpha01'
 * */
 
-public class NumberCounter extends ViewModel {
+public class SaveStateWithMVVM_ViewModel extends ViewModel {
     private SavedStateHandle handle;
 
     // constructor with saved state
-    public NumberCounter(SavedStateHandle handle) {
+    public SaveStateWithMVVM_ViewModel(SavedStateHandle handle) {
         this.handle = handle;
     }
 

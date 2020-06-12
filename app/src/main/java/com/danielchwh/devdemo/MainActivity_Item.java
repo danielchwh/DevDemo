@@ -1,10 +1,10 @@
 package com.danielchwh.devdemo;
 
-public class ContentsItem {
+public class MainActivity_Item {
     private String itemName;
     private String itemDescription;
 
-    public ContentsItem(String itemName, String itemDescription) {
+    public MainActivity_Item(String itemName, String itemDescription) {
         this.itemName = itemName;
         this.itemDescription = itemDescription;
     }

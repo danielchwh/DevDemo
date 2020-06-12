@@ -11,10 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ContentsAdapter extends RecyclerView.Adapter<ContentsAdapter.ContentsViewHolder> {
-    private List<ContentsItem> allItems;
+public class MainActivity_Adapter extends RecyclerView.Adapter<MainActivity_Adapter.ContentsViewHolder> {
+    private List<MainActivity_Item> allItems;
 
-    public ContentsAdapter(List<ContentsItem> allItems) {
+    public MainActivity_Adapter(List<MainActivity_Item> allItems) {
         this.allItems = allItems;
     }
 
@@ -22,14 +22,14 @@ public class ContentsAdapter extends RecyclerView.Adapter<ContentsAdapter.Conten
     @Override
     public ContentsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View itemView = layoutInflater.inflate(R.layout.contents_item, parent, false);
+        View itemView = layoutInflater.inflate(R.layout.activity_main_item, parent, false);
         return new ContentsViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final ContentsViewHolder holder, final int position) {
         // Get item from list and diaplay its content in textView
-        ContentsItem item = allItems.get(position);
+        MainActivity_Item item = allItems.get(position);
         holder.itemName.setText(item.getItemName());
         holder.itemDescription.setText(item.getItemDescription());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +47,8 @@ public class ContentsAdapter extends RecyclerView.Adapter<ContentsAdapter.Conten
                     intent = new Intent(holder.itemView.getContext(), SavePreferences.class);
                 } else if (position == 4) {
                     intent = new Intent(holder.itemView.getContext(), Timer.class);
+                } else if (position == 5) {
+                    intent = new Intent(holder.itemView.getContext(), RoomDatabase.class);
                 } else {
                     return;
                 }

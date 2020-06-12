@@ -11,7 +11,7 @@ import com.danielchwh.devdemo.databinding.ActivitySaveStateWithMvvmBinding;
 
 public class SaveStateWithMVVM extends AppCompatActivity {
     private ActivitySaveStateWithMvvmBinding binding;
-    private NumberCounter counter;
+    private SaveStateWithMVVM_ViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,8 @@ public class SaveStateWithMVVM extends AppCompatActivity {
 
         // restore from saved state
         binding = DataBindingUtil.setContentView(this, R.layout.activity_save_state_with_mvvm);
-        counter = new ViewModelProvider(this).get(NumberCounter.class);
-        binding.setData(counter);
+        viewModel = new ViewModelProvider(this).get(SaveStateWithMVVM_ViewModel.class);
+        binding.setData(viewModel);
         binding.setLifecycleOwner(this);
     }
 
