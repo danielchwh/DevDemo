@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.ExecutionException;
 
 public class RoomDatabase extends AppCompatActivity {
     RoomDatabase_Datebase database;
@@ -23,9 +23,14 @@ public class RoomDatabase extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_database);
 
-        buttonInsert = findViewById(R.id.buttonInsert);
-        buttonDelete = findViewById(R.id.buttonDelete);
-        textViewDisplay = findViewById(R.id.textViewDisplay);
+        // set action bar
+        getSupportActionBar().setTitle(R.string.room_database);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        buttonInsert = findViewById(R.id.buttonInsert_RoomDatabase);
+        buttonDelete = findViewById(R.id.buttonDelete_RoomDatabase);
+        textViewDisplay = findViewById(R.id.textView_RoomDatabase);
 
         database = RoomDatabase_Datebase.getDatabase(this);
         dao = database.getDao();
@@ -48,6 +53,15 @@ public class RoomDatabase extends AppCompatActivity {
                 updateView();
             }
         });
+    }
+
+    // action bar back button
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     void updateView() {

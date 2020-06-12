@@ -13,7 +13,7 @@ public class LandscapeLayout extends AppCompatActivity {
         setContentView(R.layout.activity_landscape_layout);
 
         // set action bar
-        getSupportActionBar().setTitle(R.string.save_state_with_mvvm);
+        getSupportActionBar().setTitle(R.string.landscape_layout);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }

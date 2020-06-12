@@ -22,9 +22,9 @@ public class SavePreferences extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_save_preferences);
 
-        textView = findViewById(R.id.textView);
-        button1 = findViewById(R.id.button1);
-        button2 = findViewById(R.id.button2);
+        textView = findViewById(R.id.textView_SavePreferences);
+        button1 = findViewById(R.id.button1_SavePreferences);
+        button2 = findViewById(R.id.button2_SavePreferences);
 
         // set action bar
         getSupportActionBar().setTitle(R.string.save_preferences);

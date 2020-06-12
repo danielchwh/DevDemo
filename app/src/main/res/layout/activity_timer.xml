@@ -7,13 +7,13 @@
     tools:context=".Timer">
 
     <TextView
-        android:id="@+id/itemDescription"
+        android:id="@+id/textView1_Timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Foreground running time:"
         android:textAlignment="center"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/chronometer1"
+        app:layout_constraintBottom_toTopOf="@+id/chronometer1_Timer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,32 +21,32 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Chronometer
-        android:id="@+id/chronometer1"
+        android:id="@+id/chronometer1_Timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/itemName"
+        app:layout_constraintBottom_toTopOf="@+id/textView2_Timer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1_Timer" />
 
     <TextView
-        android:id="@+id/itemName"
+        android:id="@+id/textView2_Timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total running time:"
         android:textAlignment="center"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/chronometer2"
+        app:layout_constraintBottom_toTopOf="@+id/chronometer2_Timer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chronometer1" />
+        app:layout_constraintTop_toBottomOf="@+id/chronometer1_Timer" />
 
     <Chronometer
-        android:id="@+id/chronometer2"
+        android:id="@+id/chronometer2_Timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="36sp"
@@ -54,5 +54,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2_Timer" />
 </androidx.constraintlayout.widget.ConstraintLayout>

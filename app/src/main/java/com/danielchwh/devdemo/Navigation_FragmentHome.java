@@ -33,7 +33,7 @@ public class Navigation_FragmentHome extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        button = getView().findViewById(R.id.buttonGoSecond);
+        button = getView().findViewById(R.id.button1_Navigation);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

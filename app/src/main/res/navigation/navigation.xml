@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/navigation_FragmentHome"
         android:name="com.danielchwh.devdemo.Navigation_FragmentHome"
-        android:label="fragment_navigation_home"
-        tools:layout="@layout/fragment_navigation_home" >
+        android:label="Home fragment"
+        tools:layout="@layout/fragment_navigation_home">
         <action
             android:id="@+id/action_navigation_FragmentHome_to_navigation_FragmentSecond"
             app:destination="@id/navigation_FragmentSecond"
@@ -18,6 +18,6 @@
     <fragment
         android:id="@+id/navigation_FragmentSecond"
         android:name="com.danielchwh.devdemo.Navigation_FragmentSecond"
-        android:label="fragment_navigation_second"
+        android:label="Second fragment"
         tools:layout="@layout/fragment_navigation_second" />
 </navigation>

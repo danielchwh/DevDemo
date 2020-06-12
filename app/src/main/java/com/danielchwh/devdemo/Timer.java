@@ -23,8 +23,8 @@ public class Timer extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        chronometer1 = findViewById(R.id.chronometer1);
-        chronometer2 = findViewById(R.id.chronometer2);
+        chronometer1 = findViewById(R.id.chronometer1_Timer);
+        chronometer2 = findViewById(R.id.chronometer2_Timer);
 
         chronometer1.setBase(SystemClock.elapsedRealtime());
         chronometer2.setBase(SystemClock.elapsedRealtime());

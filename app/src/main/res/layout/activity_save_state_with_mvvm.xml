@@ -15,25 +15,25 @@
         tools:context=".SaveStateWithMVVM">
 
         <TextView
-            android:id="@+id/itemName"
+            android:id="@+id/textView_SaveStateWithMVVM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{String.valueOf(data.getNumber())}"
             android:textSize="36sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_SaveStateWithMVVM"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline4"
+            android:id="@+id/guideline_SaveStateWithMVVM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.3" />
 
         <Button
-            android:id="@+id/buttonGoSecond"
+            android:id="@+id/button_SaveStateWithMVVM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{()->data.add()}"
@@ -41,6 +41,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline4" />
+            app:layout_constraintTop_toTopOf="@+id/guideline_SaveStateWithMVVM" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -7,26 +7,26 @@
     tools:context=".RoomDatabase">
 
     <View
-        android:id="@+id/divider"
+        android:id="@+id/divider_RoomDatabase"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView_RoomDatabase" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollView_RoomDatabase"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_RoomDatabase"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textViewDisplay"
+            android:id="@+id/textView_RoomDatabase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
@@ -34,27 +34,27 @@
     </ScrollView>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guideline_RoomDatabase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.3" />
 
     <Button
-        android:id="@+id/buttonInsert"
+        android:id="@+id/buttonInsert_RoomDatabase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="@string/insert_random_number"
-        app:layout_constraintBottom_toTopOf="@+id/buttonDelete"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDelete_RoomDatabase"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline_RoomDatabase"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
-        android:id="@+id/buttonDelete"
+        android:id="@+id/buttonDelete_RoomDatabase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/delete_the_first_number"
@@ -62,5 +62,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonInsert" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonInsert_RoomDatabase" />
 </androidx.constraintlayout.widget.ConstraintLayout>

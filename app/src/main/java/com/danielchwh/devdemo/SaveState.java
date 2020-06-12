@@ -19,9 +19,9 @@ public class SaveState extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_save_state);
 
-        textView = findViewById(R.id.textView);
-        button1 = findViewById(R.id.button1);
-        button2 = findViewById(R.id.button2);
+        textView = findViewById(R.id.textView_SaveState);
+        button1 = findViewById(R.id.button1_SaveState);
+        button2 = findViewById(R.id.button2_SaveState);
 
         // set action bar
         getSupportActionBar().setTitle(R.string.save_state);

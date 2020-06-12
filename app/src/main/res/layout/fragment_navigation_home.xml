@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/buttonGoSecond"
+            android:id="@+id/button1_Navigation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Go to second fragment"
