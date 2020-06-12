@@ -54,17 +54,15 @@ public class RoomDatabase extends AppCompatActivity {
         List<RoomDatabase_Entity> list = null;
         try {
             list = new GetAllAsyncTask(dao).execute().get();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        String text = "";
+        StringBuilder text = new StringBuilder();
         for (int i = 0; i < list.size(); i++) {
             RoomDatabase_Entity entity = list.get((i));
-            text += "Round " + entity.getId() + ": " + entity.getNumber() + "\n";
+            text.append("Round ").append(entity.getId()).append(": ").append(entity.getNumber()).append("\n");
         }
-        textViewDisplay.setText(text);
+        textViewDisplay.setText(text.toString());
     }
 
     static class InsertAsyncTask extends AsyncTask<RoomDatabase_Entity, Void, Void> {
