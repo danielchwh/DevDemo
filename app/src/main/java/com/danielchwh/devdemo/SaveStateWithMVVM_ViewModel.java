@@ -4,12 +4,6 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 
-/*
-* add to build gradle (app)
-* dataBinding.enabled = true
-* implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-alpha01'
-* */
-
 public class SaveStateWithMVVM_ViewModel extends ViewModel {
     private SavedStateHandle handle;
 
