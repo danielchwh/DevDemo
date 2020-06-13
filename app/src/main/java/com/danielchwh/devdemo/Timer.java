@@ -1,12 +1,12 @@
 package com.danielchwh.devdemo;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.MenuItem;
 import android.widget.Chronometer;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Timer extends AppCompatActivity {
     private Chronometer chronometer1, chronometer2;

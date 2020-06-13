@@ -1,11 +1,11 @@
 package com.danielchwh.devdemo;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
-
-import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.danielchwh.devdemo.databinding.ActivitySaveStateWithMvvmBinding;
 

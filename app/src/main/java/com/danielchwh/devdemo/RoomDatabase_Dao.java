@@ -14,7 +14,8 @@ public interface RoomDatabase_Dao {
     void insert(RoomDatabase_Entity... roomDatabase_entities);
 
     // Never use in this app, just for reference
-    @Update // Return number of updated row
+    // Return number of updated row
+    @Update
     int update(RoomDatabase_Entity... roomDatabase_entities);
 
     // Never use in this app, just for reference

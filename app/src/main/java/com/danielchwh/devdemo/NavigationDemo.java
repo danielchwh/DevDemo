@@ -1,12 +1,11 @@
 package com.danielchwh.devdemo;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
-
-import android.os.Bundle;
-import android.view.MenuItem;
 
 public class NavigationDemo extends AppCompatActivity {
     private NavController navController;

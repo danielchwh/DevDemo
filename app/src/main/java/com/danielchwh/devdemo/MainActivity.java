@@ -1,10 +1,10 @@
 package com.danielchwh.devdemo;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         allItems.add(new MainActivity_Item(getString(R.string.navigation), getString(R.string.navigation_description)));
         allItems.add(new MainActivity_Item(getString(R.string.action_bar), getString(R.string.action_bar_description)));
 
-        // Create adpater and link to recyclerView
+        // Create adapter and link to recyclerView
         adapter = new MainActivity_Adapter(allItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
