@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         allItems.add(new MainActivity_Item(getString(R.string.navigation), getString(R.string.navigation_description)));
         allItems.add(new MainActivity_Item(getString(R.string.action_bar), getString(R.string.action_bar_description)));
         allItems.add(new MainActivity_Item(getString(R.string.bottom_navigation), getString(R.string.bottom_navigation_description)));
+        allItems.add(new MainActivity_Item(getString(R.string.animator), getString(R.string.animator_description)));
 
         // Create adapter and link to recyclerView
         adapter = new MainActivity_Adapter(allItems);

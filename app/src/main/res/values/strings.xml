@@ -26,4 +26,6 @@
     <string name="action_bar_description">Add some button on action Bar</string>
     <string name="bottom_navigation">BottomNavigation</string>
     <string name="bottom_navigation_description">Use bottom navigation bar to go navigate fragments</string>
+    <string name="animator">Animator</string>
+    <string name="animator_description">Provide some simple animations</string>
 </resources>
