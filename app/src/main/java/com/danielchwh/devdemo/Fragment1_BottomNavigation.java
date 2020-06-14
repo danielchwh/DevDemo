@@ -9,7 +9,7 @@ import android.widget.Switch;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 /*
  * Remark: simple saved state doesn't work with bottom navigation bar, we must use view model
@@ -36,7 +36,7 @@ public class Fragment1_BottomNavigation extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         // change 'this' to 'requireActivity()' to keep view model after navigate to other fragment
-        mViewModel = ViewModelProviders.of(requireActivity()).get(ViewModel1_BottomNavigation.class);
+        mViewModel = new ViewModelProvider(requireActivity()).get(ViewModel1_BottomNavigation.class);
 
         // save and store state with view model
         aSwitch.setChecked(mViewModel.checked);
