@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/fragment1_BottomNavigation">
+
+    <fragment
+        android:id="@+id/fragment1_BottomNavigation"
+        android:name="com.danielchwh.devdemo.Fragment1_BottomNavigation"
+        android:label="Fragment 1"
+        tools:layout="@layout/fragment1_bottom_navigation" />
+    <fragment
+        android:id="@+id/fragment2_BottomNavigation"
+        android:name="com.danielchwh.devdemo.Fragment2_BottomNavigation"
+        android:label="Fragment 2"
+        tools:layout="@layout/fragment2_bottom_navigation" />
+</navigation>

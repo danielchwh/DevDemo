@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">DevDemo</string>
     <string name="app_title">The is a demo of Android app development</string>
-    <string name="save_state_with_mvvm">Save State With MVVM</string>
     <string name="demo">Demo</string>
     <string name="hello_world">Hello World</string>
     <string name="welcome">Welcome</string>
-    <string name="save_state">Save State</string>
     <string name="plus1">+1</string>
     <string name="minus1">-1</string>
-    <string name="save_preferences">Save Preferences</string>
     <string name="landscape_layout">Landscape Layout</string>
-    <string name="timer">Timer</string>
     <string name="landscape_layout_description">Provide layout for landscape</string>
+    <string name="save_state">Save State</string>
     <string name="save_state_description">Save data temporarily</string>
+    <string name="save_state_with_mvvm">Save State With MVVM</string>
     <string name="save_state_with_mvvm_description">Save data temporarily (for MVVM)</string>
+    <string name="save_preferences">Save Preferences</string>
     <string name="save_preferences_description">Save data permanently</string>
+    <string name="timer">Timer</string>
     <string name="timer_description">Count running time</string>
     <string name="room_database">Room Database</string>
     <string name="room_database_description">Easier to work with SQLiteDatabase</string>
@@ -24,4 +24,6 @@
     <string name="navigation_description">Navigate to different fragment</string>
     <string name="action_bar">Action Bar</string>
     <string name="action_bar_description">Add some button on action Bar</string>
+    <string name="bottom_navigation">BottomNavigation</string>
+    <string name="bottom_navigation_description">Use bottom navigation bar to go navigate fragments</string>
 </resources>
