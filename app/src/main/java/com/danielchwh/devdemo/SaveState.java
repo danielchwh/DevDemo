@@ -1,7 +1,6 @@
 package com.danielchwh.devdemo;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,10 +22,8 @@ public class SaveState extends AppCompatActivity {
         button1 = findViewById(R.id.button1_SaveState);
         button2 = findViewById(R.id.button2_SaveState);
 
-        // set action bar
+        // Set action bar title
         getSupportActionBar().setTitle(R.string.save_state);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         // restore from saved state
         if (savedInstanceState != null) {
@@ -55,12 +52,5 @@ public class SaveState extends AppCompatActivity {
         outState.putString("text", textView.getText().toString());
     }
 
-    // action bar back button
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
 }

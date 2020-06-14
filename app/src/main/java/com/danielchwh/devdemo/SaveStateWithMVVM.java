@@ -1,7 +1,6 @@
 package com.danielchwh.devdemo;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -17,10 +16,8 @@ public class SaveStateWithMVVM extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // set action bar
+        // Set action bar title
         getSupportActionBar().setTitle(R.string.save_state_with_mvvm);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         // restore from saved state
         binding = DataBindingUtil.setContentView(this, R.layout.activity_save_state_with_mvvm);
@@ -29,12 +26,5 @@ public class SaveStateWithMVVM extends AppCompatActivity {
         binding.setLifecycleOwner(this);
     }
 
-    // action bar back button
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
 }

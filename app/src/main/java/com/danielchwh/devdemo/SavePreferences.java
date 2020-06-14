@@ -3,7 +3,6 @@ package com.danielchwh.devdemo;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,10 +25,8 @@ public class SavePreferences extends AppCompatActivity {
         button1 = findViewById(R.id.button1_SavePreferences);
         button2 = findViewById(R.id.button2_SavePreferences);
 
-        // set action bar
+        // Set action bar title
         getSupportActionBar().setTitle(R.string.save_preferences);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         // create SharedPreferences and Editor objects
         shp = getPreferences(Context.MODE_PRIVATE);
@@ -65,12 +62,5 @@ public class SavePreferences extends AppCompatActivity {
         editor.apply();
     }
 
-    // action bar back button
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
 }

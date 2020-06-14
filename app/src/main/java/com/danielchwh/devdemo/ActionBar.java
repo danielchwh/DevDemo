@@ -21,10 +21,8 @@ public class ActionBar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_action_bar);
 
-        // set action bar
+        // Set action bar title
         getSupportActionBar().setTitle(R.string.action_bar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         // adjust layout if keyboard is opened
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
@@ -54,9 +52,7 @@ public class ActionBar extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-        } else if (item.getItemId() == R.id.item_ActionBar) {
+        if (item.getItemId() == R.id.item_ActionBar) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("You clicked a button");
             builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {

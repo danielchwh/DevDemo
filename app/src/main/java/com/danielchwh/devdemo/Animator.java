@@ -2,7 +2,6 @@ package com.danielchwh.devdemo;
 
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -22,10 +21,8 @@ public class Animator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animator);
 
-        // set action bar
+        // Set action bar title
         getSupportActionBar().setTitle(R.string.animator);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         imageView = findViewById(R.id.imageView_Animator);
         button1 = findViewById(R.id.button1_Animator);
@@ -128,14 +125,6 @@ public class Animator extends AppCompatActivity {
         });
     }
 
-    // action bar back button
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {

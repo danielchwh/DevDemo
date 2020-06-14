@@ -26,4 +26,16 @@ public class BottomNavigation extends AppCompatActivity {
         // Set up bottom navigation bar such that it can preform navigation
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
     }
+
+    @Override
+    public void onBackPressed() {
+        // When button pressed, finish activity rather than go back to previous fragment
+        NavController navController = Navigation.findNavController(this, R.id.fragment_BottomNavigation);
+        if (navController.getCurrentDestination().getId() != navController.getGraph().getStartDestination())
+            finish();
+        else
+            super.onBackPressed();
+    }
+
+
 }
