@@ -20,9 +20,10 @@ public class BottomNavigation extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView_BottomNavigation);
         NavController navController = Navigation.findNavController(this, R.id.fragment_BottomNavigation);
 
-        // Set up bottom navigation bar
+        // Set up action bar such that it can display title set in navigation graph
         AppBarConfiguration configuration = new AppBarConfiguration.Builder(bottomNavigationView.getMenu()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, configuration);
+        // Set up bottom navigation bar such that it can preform navigation
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
     }
 }
