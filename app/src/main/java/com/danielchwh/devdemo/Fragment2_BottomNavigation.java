@@ -35,11 +35,11 @@ public class Fragment2_BottomNavigation extends Fragment {
         mViewModel = new ViewModelProvider(requireActivity()).get(ViewModel2_BottomNavigation.class);
 
         // save and store state with view model
-        aSwitch.setChecked(mViewModel.checked);
+        aSwitch.setChecked(mViewModel.get());
         aSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mViewModel.checked = aSwitch.isChecked();
+                mViewModel.set(aSwitch.isChecked());
             }
         });
     }
