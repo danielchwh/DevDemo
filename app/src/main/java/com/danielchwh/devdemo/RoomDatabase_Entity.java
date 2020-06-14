@@ -20,12 +20,12 @@ public class RoomDatabase_Entity {
         return id;
     }
 
-    public int getNumber() {
-        return number;
-    }
-
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getNumber() {
+        return number;
     }
 
     public void setNumber(int number) {
