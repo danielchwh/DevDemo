@@ -20,6 +20,6 @@ public class Navigation_FragmentSecond extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_navigation_second, container, false);
+        return inflater.inflate(R.layout.navigation_fragment2, container, false);
     }
 }

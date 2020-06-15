@@ -3,14 +3,10 @@ package com.danielchwh.devdemo;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 
-/*
- * LiveData doesn't support boolean Primitive, but it supports Boolean object
- * */
-
-public class ViewModel1_BottomNavigation extends ViewModel {
+public class BottomNavigation_ViewModel2 extends ViewModel {
     private SavedStateHandle savedStateHandle;
 
-    public ViewModel1_BottomNavigation(SavedStateHandle savedStateHandle) {
+    public BottomNavigation_ViewModel2(SavedStateHandle savedStateHandle) {
         if (!savedStateHandle.contains("checked")) {
             savedStateHandle.set("checked", Boolean.valueOf(false));
         }

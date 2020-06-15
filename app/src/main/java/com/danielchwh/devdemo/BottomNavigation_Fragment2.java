@@ -11,19 +11,19 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-public class Fragment2_BottomNavigation extends Fragment {
+public class BottomNavigation_Fragment2 extends Fragment {
 
-    private ViewModel2_BottomNavigation mViewModel;
+    private BottomNavigation_ViewModel2 mViewModel;
     private Switch aSwitch;
 
-    public static Fragment2_BottomNavigation newInstance() {
-        return new Fragment2_BottomNavigation();
+    public static BottomNavigation_Fragment2 newInstance() {
+        return new BottomNavigation_Fragment2();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment2_bottom_navigation, container, false);
+        View view = inflater.inflate(R.layout.bottom_navigation_fragment2, container, false);
         aSwitch = view.findViewById(R.id.switch2_BottomNavigation);
         return view;
     }
@@ -32,7 +32,7 @@ public class Fragment2_BottomNavigation extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         // change 'this' to 'requireActivity()' to keep view model after navigate to other fragment
-        mViewModel = new ViewModelProvider(requireActivity()).get(ViewModel2_BottomNavigation.class);
+        mViewModel = new ViewModelProvider(requireActivity()).get(BottomNavigation_ViewModel2.class);
 
         // save and store state with view model
         aSwitch.setChecked(mViewModel.get());

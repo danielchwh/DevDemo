@@ -4,46 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment2_BottomNavigation">
+    tools:context=".BottomNavigation_Fragment1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView2_BottomNavigation"
+            android:id="@+id/imageView1_BottomNavigation"
             android:layout_width="128dp"
             android:layout_height="128dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView2_BottomNavigation"
+            app:layout_constraintBottom_toTopOf="@+id/textView1_BottomNavigation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
-            app:srcCompat="@drawable/ic_baseline_looks_two_24" />
+            app:srcCompat="@drawable/ic_baseline_looks_one_24" />
 
         <TextView
-            android:id="@+id/textView2_BottomNavigation"
+            android:id="@+id/textView1_BottomNavigation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="This is a switch to test data keeping after navigate to other fragment:"
             android:textAlignment="center"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/switch2_BottomNavigation"
+            app:layout_constraintBottom_toTopOf="@+id/switch1_BottomNavigation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2_BottomNavigation" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView1_BottomNavigation" />
 
         <Switch
-            android:id="@+id/switch2_BottomNavigation"
+            android:id="@+id/switch1_BottomNavigation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2_BottomNavigation" />
+            app:layout_constraintTop_toBottomOf="@+id/textView1_BottomNavigation" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

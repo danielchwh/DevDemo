@@ -15,19 +15,19 @@ import androidx.lifecycle.ViewModelProvider;
  * Remark: simple saved state doesn't work with bottom navigation bar, we must use view model
  * */
 
-public class Fragment1_BottomNavigation extends Fragment {
+public class BottomNavigation_Fragment1 extends Fragment {
 
-    private ViewModel1_BottomNavigation mViewModel;
+    private BottomNavigation_ViewModel1 mViewModel;
     private Switch aSwitch;
 
-    public static Fragment1_BottomNavigation newInstance() {
-        return new Fragment1_BottomNavigation();
+    public static BottomNavigation_Fragment1 newInstance() {
+        return new BottomNavigation_Fragment1();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment1_bottom_navigation, container, false);
+        View view = inflater.inflate(R.layout.bottom_navigation_fragment1, container, false);
         aSwitch = view.findViewById(R.id.switch1_BottomNavigation);
         return view;
     }
@@ -36,7 +36,7 @@ public class Fragment1_BottomNavigation extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         // change 'this' to 'requireActivity()' to keep view model after navigate to other fragment
-        mViewModel = new ViewModelProvider(requireActivity()).get(ViewModel1_BottomNavigation.class);
+        mViewModel = new ViewModelProvider(requireActivity()).get(BottomNavigation_ViewModel1.class);
 
         // save and store state with view model
         aSwitch.setChecked(mViewModel.get());
