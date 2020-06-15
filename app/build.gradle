@@ -22,7 +22,7 @@ android {
         }
     }
 
-    buildFeatures{
+    buildFeatures {
         dataBinding = true
     }
 
@@ -63,7 +63,13 @@ dependencies {
     // Room
     def room_version = "2.2.5"
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
+    // For Kotlin use kapt instead of annotationProcessor
+    annotationProcessor "androidx.room:room-compiler:$room_version"
     // Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
+
+    // Work Manager
+    def work_version = "2.3.4"
+    // (Java only)
+    implementation "androidx.work:work-runtime:$work_version"
 }

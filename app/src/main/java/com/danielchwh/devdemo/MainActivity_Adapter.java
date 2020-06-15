@@ -57,6 +57,8 @@ public class MainActivity_Adapter extends RecyclerView.Adapter<MainActivity_Adap
                     intent = new Intent(holder.itemView.getContext(), BottomNavigation.class);
                 } else if (position == 9) {
                     intent = new Intent(holder.itemView.getContext(), Animator.class);
+                } else if (position == 10) {
+                    intent = new Intent(holder.itemView.getContext(), WorkManagerDemo.class);
                 } else {
                     return;
                 }
