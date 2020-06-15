@@ -9,7 +9,7 @@
         android:id="@+id/navigation_FragmentHome"
         android:name="com.danielchwh.devdemo.Navigation_FragmentHome"
         android:label="Home fragment"
-        tools:layout="@layout/fragment_navigation_home">
+        tools:layout="@layout/navigation_fragment1">
         <action
             android:id="@+id/action_navigation_FragmentHome_to_navigation_FragmentSecond"
             app:destination="@id/navigation_FragmentSecond"
@@ -19,5 +19,5 @@
         android:id="@+id/navigation_FragmentSecond"
         android:name="com.danielchwh.devdemo.Navigation_FragmentSecond"
         android:label="Second fragment"
-        tools:layout="@layout/fragment_navigation_second" />
+        tools:layout="@layout/navigation_fragment2" />
 </navigation>
