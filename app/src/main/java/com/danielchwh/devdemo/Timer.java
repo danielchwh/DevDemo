@@ -63,6 +63,4 @@ public class Timer extends AppCompatActivity {
         chronometer2.setBase(savedInstanceState.getLong("timer2"));
         isRestored = true;
     }
-
-
 }

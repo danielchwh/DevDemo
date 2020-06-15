@@ -36,6 +36,4 @@ public class BottomNavigation extends AppCompatActivity {
         else
             super.onBackPressed();
     }
-
-
 }

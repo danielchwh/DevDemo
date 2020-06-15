@@ -14,6 +14,4 @@ public class LandscapeLayout extends AppCompatActivity {
         // Set action bar title
         getSupportActionBar().setTitle(R.string.landscape_layout);
     }
-
-
 }

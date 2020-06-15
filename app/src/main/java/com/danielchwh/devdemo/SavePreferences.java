@@ -61,6 +61,4 @@ public class SavePreferences extends AppCompatActivity {
         editor.putInt("num", num);
         editor.apply();
     }
-
-
 }

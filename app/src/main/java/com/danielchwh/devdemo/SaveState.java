@@ -51,6 +51,4 @@ public class SaveState extends AppCompatActivity {
         // save text before rotation
         outState.putString("text", textView.getText().toString());
     }
-
-
 }

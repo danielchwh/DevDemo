@@ -47,5 +47,4 @@ public class BottomNavigation_Fragment1 extends Fragment {
             }
         });
     }
-
 }

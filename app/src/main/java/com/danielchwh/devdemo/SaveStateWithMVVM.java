@@ -25,6 +25,4 @@ public class SaveStateWithMVVM extends AppCompatActivity {
         binding.setData(viewModel);
         binding.setLifecycleOwner(this);
     }
-
-
 }
