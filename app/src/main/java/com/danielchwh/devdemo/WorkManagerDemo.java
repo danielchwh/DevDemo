@@ -19,6 +19,9 @@ public class WorkManagerDemo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_work_manager);
 
+        // Set action bar title
+        getSupportActionBar().setTitle(R.string.work_manager);
+
         // Enqueue work
         Button button1 = findViewById(R.id.button1_WorkManager);
         button1.setOnClickListener(new View.OnClickListener() {

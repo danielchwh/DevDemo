@@ -28,6 +28,6 @@
     <string name="bottom_navigation_description">Use bottom navigation bar to go navigate fragments</string>
     <string name="animator">Animator</string>
     <string name="animator_description">Provide some simple animations</string>
-    <string name="workmanager">Work Manager</string>
-    <string name="workmanager_description">Use work manager to achieve a simple background task</string>
+    <string name="work_manager">Work Manager</string>
+    <string name="work_manager_description">Use work manager to achieve a simple background task</string>
 </resources>
