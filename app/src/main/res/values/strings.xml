@@ -30,4 +30,6 @@
     <string name="animator_description">Provide some simple animations</string>
     <string name="work_manager">Work Manager</string>
     <string name="work_manager_description">Use work manager to achieve a simple background task</string>
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="navigation_drawer_description">Provide a navigation drawer</string>
 </resources>
