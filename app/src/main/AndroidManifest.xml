@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SwipeRefresh"></activity>
+        <activity android:name=".SaveFile"></activity>
+        <activity android:name=".SwipeRefresh" />
         <activity
             android:name=".NavigationDrawer"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -32,5 +33,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

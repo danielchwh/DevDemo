@@ -63,6 +63,8 @@ public class MainActivity_Adapter extends RecyclerView.Adapter<MainActivity_Adap
                     intent = new Intent(holder.itemView.getContext(), NavigationDrawer.class);
                 } else if (position == 12) {
                     intent = new Intent(holder.itemView.getContext(), SwipeRefresh.class);
+                } else if (position == 13) {
+                    intent = new Intent(holder.itemView.getContext(), SaveFile.class);
                 } else {
                     return;
                 }

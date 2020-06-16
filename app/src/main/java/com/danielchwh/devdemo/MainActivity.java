@@ -20,7 +20,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.recyclerView);
+        initializeItem();
 
+        // Create adapter and link to recyclerView
+        adapter = new MainActivity_Adapter(allItems);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+    }
+
+    private void initializeItem() {
         // Create contents and insert item
         allItems = new ArrayList<MainActivity_Item>();
         allItems.add(new MainActivity_Item(getString(R.string.landscape_layout), getString(R.string.landscape_layout_description)));
@@ -36,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
         allItems.add(new MainActivity_Item(getString(R.string.work_manager), getString(R.string.work_manager_description)));
         allItems.add(new MainActivity_Item(getString(R.string.navigation_drawer), getString(R.string.navigation_drawer_description)));
         allItems.add(new MainActivity_Item(getString(R.string.swipe_refresh), getString(R.string.swipe_refresh_description)));
-
-        // Create adapter and link to recyclerView
-        adapter = new MainActivity_Adapter(allItems);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+        allItems.add(new MainActivity_Item(getString(R.string.save_file), getString(R.string.save_file_description)));
     }
 }

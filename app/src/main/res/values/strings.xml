@@ -34,4 +34,6 @@
     <string name="navigation_drawer_description">Provide a navigation drawer</string>
     <string name="swipe_refresh">Swipe Refresh</string>
     <string name="swipe_refresh_description">Allow user swipe down to refresh</string>
+    <string name="save_file">Save File</string>
+    <string name="save_file_description">Save the image file</string>
 </resources>
