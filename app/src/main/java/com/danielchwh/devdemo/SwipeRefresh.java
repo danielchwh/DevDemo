@@ -1,11 +1,11 @@
 package com.danielchwh.devdemo;
 
+import android.os.Bundle;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.os.Bundle;
-import android.widget.TextView;
 
 import java.util.Random;
 
