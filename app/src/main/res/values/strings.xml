@@ -32,4 +32,6 @@
     <string name="work_manager_description">Use work manager to achieve a simple background task</string>
     <string name="navigation_drawer">Navigation Drawer</string>
     <string name="navigation_drawer_description">Provide a navigation drawer</string>
+    <string name="swipe_refresh">Swipe Refresh</string>
+    <string name="swipe_refresh_description">Allow user swipe down to refresh</string>
 </resources>
