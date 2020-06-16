@@ -20,8 +20,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.OutputStream;
 
 public class SaveFile extends AppCompatActivity {
@@ -75,29 +75,36 @@ public class SaveFile extends AppCompatActivity {
         BitmapDrawable bitmapDrawable = (BitmapDrawable) imageView.getDrawable();
         Bitmap bitmap = bitmapDrawable.getBitmap();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            OutputStream fos;
-            try {
+        OutputStream fos;
+        try {
+            // Set up file output stream
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 ContentResolver resolver = getContentResolver();
                 ContentValues contentValues = new ContentValues();
+                contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, "Demo image");
+                contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/png");
+                contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, "Pictures/DevDemo/" + System.currentTimeMillis() + ".png");
                 Uri imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
                 fos = resolver.openOutputStream(imageUri);
-                if (bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)) {
-                    Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(this, "Save image failed", Toast.LENGTH_SHORT).show();
-                }
-                fos.flush();
-                fos.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            if (MediaStore.Images.Media.insertImage(getContentResolver(), bitmap, "", "") == null) {
-                Toast.makeText(this, "Save image failed", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
+                String imagesDir = Environment.getExternalStoragePublicDirectory(
+                        Environment.DIRECTORY_PICTURES).toString() + File.separator + "DevDemo";
+                File folder = new File(imagesDir);
+                if (!folder.exists())
+                    folder.mkdir();
+                File image = new File(imagesDir, System.currentTimeMillis() + ".png");
+                fos = new FileOutputStream(image);
             }
+            // Save image
+            if (bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)) {
+                Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Save image failed", Toast.LENGTH_SHORT).show();
+            }
+            fos.flush();
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
