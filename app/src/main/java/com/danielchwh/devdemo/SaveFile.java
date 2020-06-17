@@ -46,13 +46,13 @@ public class SaveFile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // For version < Android M, permission require should be written in AndroidManifest
-                // For version >= Android Q, save image doesn't require permission
+                // For version >= Android Q, save image_save_file doesn't require permission
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
                         && Build.VERSION.SDK_INT < Build.VERSION_CODES.Q
                         && ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                     requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
                 } else {
-                    // Already have permission, save image now
+                    // Already have permission, save image_save_file now
                     saveImage();
                 }
             }
@@ -83,12 +83,12 @@ public class SaveFile extends AppCompatActivity {
         OutputStream fos;
         boolean result;
         try {
-            // Save image
+            // Save image_save_file
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 ContentResolver resolver = getContentResolver();
                 ContentValues contentValues = new ContentValues();
                 contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, filename);
-                contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/png");
+                contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image_save_file/png");
                 contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/DevDemo");
                 Uri imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
                 fos = resolver.openOutputStream(imageUri);
@@ -111,7 +111,7 @@ public class SaveFile extends AppCompatActivity {
             if (result) {
                 Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Save image failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Save image_save_file failed", Toast.LENGTH_SHORT).show();
             }
             fos.flush();
             fos.close();

@@ -86,8 +86,8 @@ public class MainActivity_Adapter extends RecyclerView.Adapter<MainActivity_Adap
         public ContentsViewHolder(@NonNull View itemView) {
             super(itemView);
             // Get view and context
-            itemName = itemView.findViewById(R.id.itemName);
-            itemDescription = itemView.findViewById(R.id.itemDescription);
+            itemName = itemView.findViewById(R.id.textView1_Main);
+            itemDescription = itemView.findViewById(R.id.textView2_Main);
         }
     }
 }

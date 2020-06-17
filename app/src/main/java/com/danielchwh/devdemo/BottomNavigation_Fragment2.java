@@ -23,7 +23,7 @@ public class BottomNavigation_Fragment2 extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.bottom_navigation_fragment2, container, false);
+        View view = inflater.inflate(R.layout.fragment_bottom_navigation_2, container, false);
         aSwitch = view.findViewById(R.id.switch2_BottomNavigation);
         return view;
     }

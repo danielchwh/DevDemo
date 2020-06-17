@@ -17,6 +17,6 @@ public class ViewPager_Fragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment1_view_pager, container, false);
+        return inflater.inflate(R.layout.fragment_view_pager_1, container, false);
     }
 }

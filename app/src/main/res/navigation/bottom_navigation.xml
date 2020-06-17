@@ -9,10 +9,10 @@
         android:id="@+id/fragment1_BottomNavigation"
         android:name="com.danielchwh.devdemo.BottomNavigation_Fragment1"
         android:label="Fragment 1"
-        tools:layout="@layout/bottom_navigation_fragment1" />
+        tools:layout="@layout/fragment_bottom_navigation_1" />
     <fragment
         android:id="@+id/fragment2_BottomNavigation"
         android:name="com.danielchwh.devdemo.BottomNavigation_Fragment2"
         android:label="Fragment 2"
-        tools:layout="@layout/bottom_navigation_fragment2" />
+        tools:layout="@layout/fragment_bottom_navigation_2" />
 </navigation>

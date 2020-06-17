@@ -7,13 +7,13 @@
     android:focusable="true">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card"
+        android:id="@+id/card_Main"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="4dp"
         android:foreground="?attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +25,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageView_Main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +35,20 @@
                 app:srcCompat="@drawable/ic_baseline_chevron_right_24" />
 
             <TextView
-                android:id="@+id/itemDescription"
+                android:id="@+id/textView1_Main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView2_Main"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2_Main"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -44,21 +57,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline6"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/itemName"
-                app:layout_constraintTop_toBottomOf="@+id/itemName" />
-
-            <TextView
-                android:id="@+id/itemName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="TextView"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/itemDescription"
-                app:layout_constraintEnd_toStartOf="@+id/guideline6"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="@+id/textView1_Main"
+                app:layout_constraintTop_toBottomOf="@+id/textView1_Main" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline5"

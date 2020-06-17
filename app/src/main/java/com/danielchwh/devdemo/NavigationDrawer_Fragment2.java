@@ -22,7 +22,7 @@ public class NavigationDrawer_Fragment2 extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         CollapsingToolbarLayout collapsingLayout = requireActivity().findViewById(R.id.collapsingLayout_NavigationDrawer);
         collapsingLayout.setTitle("Fragment 2");
-        return inflater.inflate(R.layout.navigation_drawer_fragment2, container, false);
+        return inflater.inflate(R.layout.fragment_navigation_drawer_2, container, false);
     }
 
     @Override
