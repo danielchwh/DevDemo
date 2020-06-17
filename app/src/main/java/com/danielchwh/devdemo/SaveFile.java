@@ -3,6 +3,7 @@ package com.danielchwh.devdemo;
 import android.Manifest;
 import android.content.ContentResolver;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -23,6 +24,8 @@ import androidx.core.content.ContextCompat;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class SaveFile extends AppCompatActivity {
     ImageView imageView;
@@ -75,28 +78,37 @@ public class SaveFile extends AppCompatActivity {
         BitmapDrawable bitmapDrawable = (BitmapDrawable) imageView.getDrawable();
         Bitmap bitmap = bitmapDrawable.getBitmap();
 
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd-HHmmss");
+        String filename = "demo-" + dateFormat.format(new Date()) + ".png";
         OutputStream fos;
+        boolean result;
         try {
-            // Set up file output stream
+            // Save image
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 ContentResolver resolver = getContentResolver();
                 ContentValues contentValues = new ContentValues();
-                contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, "Demo image");
+                contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, filename);
                 contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/png");
-                contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, "Pictures/DevDemo/" + System.currentTimeMillis() + ".png");
+                contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/DevDemo");
                 Uri imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
                 fos = resolver.openOutputStream(imageUri);
+                result = bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
             } else {
                 String imagesDir = Environment.getExternalStoragePublicDirectory(
                         Environment.DIRECTORY_PICTURES).toString() + File.separator + "DevDemo";
                 File folder = new File(imagesDir);
                 if (!folder.exists())
                     folder.mkdir();
-                File image = new File(imagesDir, System.currentTimeMillis() + ".png");
+                File image = new File(imagesDir, filename);
                 fos = new FileOutputStream(image);
+                result = bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+                // For old version android, we need send broadcast to refresh gallery
+                Uri contentUri = Uri.fromFile(image);
+                Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, contentUri);
+                sendBroadcast(mediaScanIntent);
             }
-            // Save image
-            if (bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)) {
+            // Display result
+            if (result) {
                 Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Save image failed", Toast.LENGTH_SHORT).show();
