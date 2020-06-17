@@ -45,5 +45,6 @@ public class MainActivity extends AppCompatActivity {
         allItems.add(new MainActivity_Item(getString(R.string.navigation_drawer), getString(R.string.navigation_drawer_description)));
         allItems.add(new MainActivity_Item(getString(R.string.swipe_refresh), getString(R.string.swipe_refresh_description)));
         allItems.add(new MainActivity_Item(getString(R.string.save_file), getString(R.string.save_file_description)));
+        allItems.add(new MainActivity_Item(getString(R.string.view_pager), getString(R.string.view_pager_description)));
     }
 }

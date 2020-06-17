@@ -36,4 +36,6 @@
     <string name="swipe_refresh_description">Allow user swipe down to refresh</string>
     <string name="save_file">Save File</string>
     <string name="save_file_description">Save the image file</string>
+    <string name="view_pager">View Pager</string>
+    <string name="view_pager_description">Go to other page by swiping left/right</string>
 </resources>
