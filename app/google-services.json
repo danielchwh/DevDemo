@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "281556239035",
+    "firebase_url": "https://devdemo-76652.firebaseio.com",
+    "project_id": "devdemo-76652",
+    "storage_bucket": "devdemo-76652.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281556239035:android:e706c9bdd1ec8ebffb5f9e",
+        "android_client_info": {
+          "package_name": "com.danielchwh.devdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281556239035-c0lekoln374ish7vv4f18l2b8agn2kie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEKInOUfJ5HzuonFZPjZOol_ehle5sn00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281556239035-c0lekoln374ish7vv4f18l2b8agn2kie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

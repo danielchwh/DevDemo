@@ -48,5 +48,6 @@ public class MainActivity extends AppCompatActivity {
         allItems.add(new MainActivity_Item(getString(R.string.view_pager), getString(R.string.view_pager_description), "ViewPager"));
         allItems.add(new MainActivity_Item(getString(R.string.volley), getString(R.string.volley_description), "VolleyDemo"));
         allItems.add(new MainActivity_Item(getString(R.string.gson), getString(R.string.gson_description), "GsonDemo"));
+        allItems.add(new MainActivity_Item(getString(R.string.firebase), getString(R.string.firebase_description), "FirebaseDemo"));
     }
 }
