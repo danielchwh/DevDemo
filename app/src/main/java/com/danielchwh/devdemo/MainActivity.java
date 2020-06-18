@@ -47,5 +47,6 @@ public class MainActivity extends AppCompatActivity {
         allItems.add(new MainActivity_Item(getString(R.string.save_file), getString(R.string.save_file_description), "SaveFile"));
         allItems.add(new MainActivity_Item(getString(R.string.view_pager), getString(R.string.view_pager_description), "ViewPager"));
         allItems.add(new MainActivity_Item(getString(R.string.volley), getString(R.string.volley_description), "VolleyDemo"));
+        allItems.add(new MainActivity_Item(getString(R.string.gson), getString(R.string.gson_description), "GsonDemo"));
     }
 }

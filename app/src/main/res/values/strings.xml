@@ -40,4 +40,6 @@
     <string name="view_pager_description">Go to other page by swiping left/right</string>
     <string name="volley">Volley</string>
     <string name="volley_description">Use volley to load image from internet</string>
+    <string name="gson">Gson</string>
+    <string name="gson_description">Use gson to access web api</string>
 </resources>
