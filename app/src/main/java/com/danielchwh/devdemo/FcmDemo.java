@@ -1,10 +1,7 @@
 package com.danielchwh.devdemo;
 
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -14,20 +11,18 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
-import com.google.firebase.messaging.FirebaseMessaging;
-import com.google.firebase.messaging.RemoteMessage;
 
-public class FirebaseDemo extends AppCompatActivity {
+public class FcmDemo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_firebase_demo);
+        setContentView(R.layout.activity_fcm);
 
         // Set action bar title
-        getSupportActionBar().setTitle(R.string.firebase);
+        getSupportActionBar().setTitle(R.string.fcm);
 
-        EditText editText = findViewById(R.id.editText_Firebase);
+        EditText editText = findViewById(R.id.editText_Fcm);
 
         FirebaseInstanceId.getInstance().getInstanceId()
                 .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {

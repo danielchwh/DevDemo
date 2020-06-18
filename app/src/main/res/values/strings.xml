@@ -43,6 +43,6 @@
     <string name="gson">Gson</string>
     <string name="gson_description">Use gson to access web api</string>
     <string name="fcm_notification_channel_id">FcmDemo</string>
-    <string name="firebase">Firebase</string>
-    <string name="firebase_description">Try fcm notification of firebase</string>
+    <string name="fcm">Fcm</string>
+    <string name="fcm_description">Try fcm notification of firebase</string>
 </resources>

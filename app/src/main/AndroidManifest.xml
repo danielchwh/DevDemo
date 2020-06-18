@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FirebaseDemo"></activity>
+        <activity android:name=".FcmDemo"></activity>
         <activity android:name=".GsonDemo" />
         <activity android:name=".VolleyDemo" />
         <activity android:name=".ViewPager" />
@@ -41,7 +41,7 @@
         </activity>
 
         <service
-            android:name=".Firebase_Service"
+            android:name=".Fcm_Service"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
