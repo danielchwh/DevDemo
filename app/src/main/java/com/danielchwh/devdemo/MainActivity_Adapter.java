@@ -28,7 +28,7 @@ public class MainActivity_Adapter extends RecyclerView.Adapter<MainActivity_Adap
 
     @Override
     public void onBindViewHolder(@NonNull final ContentsViewHolder holder, final int position) {
-        // Get item from list and diaplay its content in textView
+        // Get item from list and display its content in textView
         MainActivity_Item item = allItems.get(position);
         holder.itemName.setText(item.getItemName());
         holder.itemDescription.setText(item.getItemDescription());
@@ -36,40 +36,8 @@ public class MainActivity_Adapter extends RecyclerView.Adapter<MainActivity_Adap
             @Override
             public void onClick(View view) {
                 // Set up button click event
-                Intent intent = null;
-                if (position == 0) {
-                    intent = new Intent(holder.itemView.getContext(), LandscapeLayout.class);
-                } else if (position == 1) {
-                    intent = new Intent(holder.itemView.getContext(), SaveState.class);
-                } else if (position == 2) {
-                    intent = new Intent(holder.itemView.getContext(), SaveStateWithMVVM.class);
-                } else if (position == 3) {
-                    intent = new Intent(holder.itemView.getContext(), SavePreferences.class);
-                } else if (position == 4) {
-                    intent = new Intent(holder.itemView.getContext(), Timer.class);
-                } else if (position == 5) {
-                    intent = new Intent(holder.itemView.getContext(), RoomDatabase.class);
-                } else if (position == 6) {
-                    intent = new Intent(holder.itemView.getContext(), NavigationDemo.class);
-                } else if (position == 7) {
-                    intent = new Intent(holder.itemView.getContext(), ActionBar.class);
-                } else if (position == 8) {
-                    intent = new Intent(holder.itemView.getContext(), BottomNavigation.class);
-                } else if (position == 9) {
-                    intent = new Intent(holder.itemView.getContext(), Animator.class);
-                } else if (position == 10) {
-                    intent = new Intent(holder.itemView.getContext(), WorkManagerDemo.class);
-                } else if (position == 11) {
-                    intent = new Intent(holder.itemView.getContext(), NavigationDrawer.class);
-                } else if (position == 12) {
-                    intent = new Intent(holder.itemView.getContext(), SwipeRefresh.class);
-                } else if (position == 13) {
-                    intent = new Intent(holder.itemView.getContext(), SaveFile.class);
-                } else if (position == 14) {
-                    intent = new Intent(holder.itemView.getContext(), ViewPager.class);
-                } else {
-                    return;
-                }
+                Intent intent = new Intent();
+                intent.setClassName(holder.itemView.getContext(), item.getClassFullName());
                 holder.itemView.getContext().startActivity(intent);
             }
         });
