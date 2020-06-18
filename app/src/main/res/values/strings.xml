@@ -38,4 +38,6 @@
     <string name="save_file_description">Save the image file</string>
     <string name="view_pager">View Pager</string>
     <string name="view_pager_description">Go to other page by swiping left/right</string>
+    <string name="volley">Volley</string>
+    <string name="volley_description">Use volley to load image from internet</string>
 </resources>
