@@ -20,6 +20,9 @@ public class VolleyDemo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volley);
 
+        // Set action bar title
+        getSupportActionBar().setTitle(R.string.volley);
+
         NetworkImageView imageView = findViewById(R.id.imageView_Volley);
         Button button1 = findViewById(R.id.button1_Volley);
         Button button2 = findViewById(R.id.button2_Volley);
